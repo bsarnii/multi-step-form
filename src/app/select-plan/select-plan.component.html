@@ -1,0 +1,20 @@
+<div class="select-plan-container">
+    <h1 class="main-heading">Select your plan</h1>
+    <p class="main-paragraph">You have the option of monthly or yearly billing</p>
+    <div class="plan-options">
+        <div *ngFor="let i of [0,1,2]" class="option">
+            <img src="{{planIcons[i]}}">
+            <p class="planName">{{planNames[i]}}</p>
+            <p class="planFee">${{planFeeMonth[i]}}/mo</p>
+            <p *ngIf="toggle" class="last-paragraph">2 months free</p>
+        </div>
+    </div>
+    <div class="switch-container">
+        <span class="monthly" [ngClass]="[toggle ? 'coolGray' : 'marineBlue']">Monthly</span>
+        <label  class="switch">
+            <input (click)="toggleSwitch()" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <span  class="yearly" [ngClass]="[toggle ? 'marineBlue' : 'coolGray']">Yearly</span>
+    </div>
+</div>
