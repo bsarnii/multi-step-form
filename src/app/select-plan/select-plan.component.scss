@@ -10,7 +10,7 @@
         border: 1px solid $lightGray;
         border-radius: 10px;
         padding: 1rem;
-        width: 175px;
+        width: 140px;
         cursor: pointer;
         img{
             margin-bottom: 3rem;
@@ -28,7 +28,7 @@
         }
         .last-paragraph{
             color: $marineBlue;
-            font-size: 14px;
+            font-size: 13px;
         }
     }
     .plan-active{
@@ -110,4 +110,9 @@ input:checked + .slider:before {
   
 .slider.round:before {
     border-radius: 50%;
+}
+.error {
+    font-weight: 600;
+    color: $strawberryRed;
+    text-align: center;
 }

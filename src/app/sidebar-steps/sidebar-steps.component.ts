@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class SidebarStepsComponent {
   @Input() number:number = 1;
   @Input() detail:string= " ";
+  @Input() active:string="";
 }

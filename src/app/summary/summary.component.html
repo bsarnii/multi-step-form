@@ -1,1 +1,33 @@
-<p>summary works!</p>
+<div class="summary">
+    <h1 class="main-heading">Finishing up</h1>
+    <p class="main-paragraph">Double-check everything looks OK before confirming</p>
+    <div class="prices">
+        <div class="main-plan-with-price">
+            <div class="main-plan">
+                <p *ngIf="!sumData.toggle">{{sumData.plan.name}} (Monthly)</p>
+                <p *ngIf="sumData.toggle">{{sumData.plan.name}} (Yearly)</p>
+                <p class="gray-14px" (click)="ps.toPageTwo()">Change</p>
+            </div>
+            <p *ngIf="!sumData.toggle" class="main-price">${{sumData.plan.sumMonth}}/mo</p>
+            <p *ngIf="sumData.toggle" class="main-price">${{sumData.plan.sumYear}}/yr</p>
+        </div>
+        <div *ngIf="addOn1.checked || addOn2.checked || addOn3.checked" class="add-ons">
+            <div *ngFor="let i of [0,1,2]" class="add-on-with-price">
+                <ng-container *ngIf="sumData.plan.addOns[i].checked">
+                    <p class="add-on gray-14px">{{sumData.plan.addOns[i].addOnName}}</p>
+                    <p *ngIf="!sumData.toggle" class="add-on-price">+${{sumData.plan.addOns[i].priceMonth}}/mo</p>
+                    <p *ngIf="sumData.toggle" class="add-on-price">+${{sumData.plan.addOns[i].priceYear}}/yr</p>
+                </ng-container>    
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!sumData.toggle" class="total-container">
+        <p class="gray-14px">Total (per month)</p>
+        <p class="total-price">${{sumData.calcTotal()}}/mo</p>
+    </div>
+    <div *ngIf="sumData.toggle" class="total-container">
+        <p class="gray-14px">Total (per year)</p>
+        <p class="total-price">${{sumData.calcTotal()}}/yr</p>
+    </div>
+</div>
+

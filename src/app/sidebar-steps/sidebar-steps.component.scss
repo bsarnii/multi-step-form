@@ -2,12 +2,13 @@
 
 .sidebar-step{
     display: flex;
+    align-items: center;
     margin-bottom: 1.5rem;
 }
 .sidebar-number{
     font-size: 16px;
-    height: 1rem;
-    width: 1rem;
+    height: 2rem;
+    width: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,12 +17,18 @@
     border-radius: 50%;
     color: $white;
     margin-right: 1rem;
+    font-weight: 500;
+}
+.active-number{
+    color: $marineBlue;
+    background-color: $lightBlue;
+    border: none;
 }
 .sidebar-details{
     display: flex;
     flex-direction: column;
     small{
-        color: $coolGray;
+        color: $lightGray;
         font-weight: 400;
     }
     span{

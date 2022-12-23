@@ -1,0 +1,25 @@
+export interface Plan {
+    name:string,
+    sumMonth:number,
+    sumYear:number,
+    addOns:[
+        {
+        addOnName:string,
+        priceMonth:number,
+        priceYear:number,
+        checked:boolean
+        },
+        {
+        addOnName:string,
+        priceMonth:number,
+        priceYear:number,
+        checked:boolean
+        },
+        {
+        addOnName:string,
+        priceMonth:number,
+        priceYear:number,
+        checked:boolean
+        },
+    ]
+}

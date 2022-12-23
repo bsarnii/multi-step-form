@@ -1,20 +1,22 @@
 <div class="select-plan-container">
     <h1 class="main-heading">Select your plan</h1>
-    <p class="main-paragraph">You have the option of monthly or yearly billing</p>
+    <p class="main-paragraph">You have the option of monthly or yearly billing.</p>
     <div class="plan-options">
-        <div *ngFor="let i of [0,1,2]" class="option">
+        <div *ngFor="let i of [0,1,2]" [ngClass]="{'plan-active' : i === selectedItem }" class="option" (click)="selectItem(i)">
             <img src="{{planIcons[i]}}">
             <p class="planName">{{planNames[i]}}</p>
-            <p class="planFee">${{planFeeMonth[i]}}/mo</p>
-            <p *ngIf="toggle" class="last-paragraph">2 months free</p>
+            <p *ngIf="!sumData.toggle" class="planFee">${{planFeeMonth[i]}}/mo</p>
+            <p *ngIf="sumData.toggle" class="planFee">${{planFeeYear[i]}}/yr</p>
+            <p *ngIf="sumData.toggle" class="last-paragraph">2 months free</p>
         </div>
     </div>
     <div class="switch-container">
-        <span class="monthly" [ngClass]="[toggle ? 'coolGray' : 'marineBlue']">Monthly</span>
+        <span class="monthly" [ngClass]="[sumData.toggle ? 'coolGray' : 'marineBlue']">Monthly</span>
         <label  class="switch">
-            <input (click)="toggleSwitch()" type="checkbox">
+            <input (click)="sumData.toggleSwitch()" type="checkbox">
             <span class="slider round"></span>
         </label>
-        <span  class="yearly" [ngClass]="[toggle ? 'marineBlue' : 'coolGray']">Yearly</span>
+        <span  class="yearly" [ngClass]="[sumData.toggle ? 'marineBlue' : 'coolGray']">Yearly</span>
     </div>
+    <p class="error" *ngIf="ps.error">You need to select a plan!</p>
 </div>

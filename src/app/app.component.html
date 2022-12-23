@@ -1,10 +1,16 @@
 <div class="container">
     <app-sidebar></app-sidebar>
     <main>
-        <app-select-plan></app-select-plan>
-        <div class="button-container">
-            <button class="button-left">Go Back</button>
-            <button class="button-right">Next Step</button>
+        <app-personal-info [ngStyle]="{'display': ps.page === 1 ? 'block' : 'none'}"></app-personal-info>
+        <app-select-plan [ngStyle]="{'display': ps.page === 2 ? 'block' : 'none'}"></app-select-plan>
+        <app-add-ons [ngStyle]="{'display': ps.page === 3 ? 'block' : 'none'}"></app-add-ons>
+        <app-summary [ngStyle]="{'display': ps.page === 4 ? 'block' : 'none'}"></app-summary>
+        <app-thank-you style="height:100%" [ngStyle]="{'display': ps.page === 5 ? 'block' : 'none'}"></app-thank-you>
+        <div [ngStyle]="{'justify-content': ps.page === 1 ? 'flex-end' : 'space-between'}" class="button-container">
+            <button *ngIf="ps.page > 1 && ps.page < 5" (click)="ps.minusPage()" class="button-left">Go Back</button>
+            <button form="myForm" *ngIf="ps.page === 1" type="submit"  class="button-right">Next Step</button>
+            <button *ngIf="ps.page === 2" type="submit" (click)="nextStep()" class="button-right">Next Step</button>
+            <button [class.confirm]="ps.page === 4" *ngIf="ps.page > 2 && ps.page < 5" type="submit" (click)="ps.plusPage()" class="button-right">{{ps.buttonText}}</button>
         </div>
     </main>
 </div>

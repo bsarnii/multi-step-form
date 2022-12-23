@@ -1,0 +1,60 @@
+@import "../../styles.scss";
+.add-on-options-container{
+    margin: 2rem 0;
+    .add-on-option{
+        // background-color: $alabaster; enable on active state
+        display:flex;
+        align-items: center;
+        border: 1px solid $lightGray;
+        border-radius: 10px;
+        padding: 1rem 0;
+        margin: 1rem 0;
+        cursor: pointer;
+        transition: border 0.2s;
+        &:hover{
+            border: 1px solid $purplishBlue;
+        }
+        span{
+            padding: .3rem .3rem;
+            // background-color: $purplishBlue;  enable on active state
+            border: 1px solid $lightGray; // on active state remove
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:fit-content;
+            height: fit-content;
+            margin: 0 2rem;
+            svg{
+                height:12px;
+                width: 12px;
+            }
+        }
+        .text-together{
+            width: 270px;
+            p{
+                margin: .25rem 0;
+                &:first-child{
+                    font-weight: 500;
+                    color: $marineBlue;
+                }
+                &:last-child{
+                    font-size: 15px;
+                    color: $coolGray;
+                }
+            }
+            
+        }
+        .price{
+            color: $purplishBlue;
+        }
+    }
+    .add-on-active{
+        background-color: $alabaster;
+        border: 1px solid $purplishBlue;
+        .span-active{
+            background-color: $purplishBlue;
+            border: 1px solid $purplishBlue;
+        }
+    }
+}

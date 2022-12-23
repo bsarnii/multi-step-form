@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
+import { PagesService } from './pages.service';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -8,6 +11,8 @@ import { SelectPlanComponent } from './select-plan/select-plan.component';
 import { AddOnsComponent } from './add-ons/add-ons.component';
 import { SummaryComponent } from './summary/summary.component';
 import { SidebarStepsComponent } from './sidebar-steps/sidebar-steps.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +22,14 @@ import { SidebarStepsComponent } from './sidebar-steps/sidebar-steps.component';
     SelectPlanComponent,
     AddOnsComponent,
     SummaryComponent,
-    SidebarStepsComponent
+    SidebarStepsComponent,
+    ThankYouComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [PagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

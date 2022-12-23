@@ -1,1 +1,16 @@
-<p>add-ons works!</p>
+<div class="add-ons-container">
+    <h1 class="main-heading">Pick add-ons</h1>
+    <p class="main-paragraph">Add-ons help enhance your gaming experience.</p>
+    <div class="add-on-options-container">
+        <div *ngFor="let i of [0,1,2]" [ngClass]="{'add-on-active' : selectedItems[i] }" class="add-on-option" (click)="selectItem(i)">
+            <span [ngClass]="{'span-active' : selectedItems[i] }"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg></span>
+            <div class="text-together">
+                <p class="top-text">{{addOnTopTexts[i]}}</p>
+                <p class="bottom-text">{{addOnBottomTexts[i]}}</p>
+            </div>
+            <p *ngIf="!sumData.toggle" class="price">+${{addOnMonthFees[i]}}/mo</p>
+            <p *ngIf="sumData.toggle" class="price">+${{addOnYearFees[i]}}/yr</p>
+        </div>
+
+    </div>
+</div>
