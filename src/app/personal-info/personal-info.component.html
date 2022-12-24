@@ -2,20 +2,20 @@
     <h1 class="main-heading">Personal info</h1>
     <p class="main-paragraph">Please provide your name, email address, and phone number.</p>
     <form id="myForm" (ngSubmit)="onSubmit()" #myForm="ngForm">
-        <label>Name</label>
+        <label for="name">Name</label>
         <span>{{nameError}}</span>
         <br>
-        <input type="text" placeholder="e.g. Stephen King" name="name" ngModel required>
+        <input id="name" type="text" placeholder="e.g. Stephen King" name="name" ngModel required>
         <br>
-        <label>Email Address</label>
+        <label for="email">Email Address</label>
         <span>{{emailError}}</span>
         <br>
-        <input type="email" placeholder="e.g. stephenking@lorem.com" name="e-mail" ngModel required email>
+        <input id="email" type="email" placeholder="e.g. stephenking@lorem.com" name="e-mail" ngModel required email>
         <br>
-        <label>Phone Number</label>
+        <label for="tel">Phone Number</label>
         <span>{{phoneError}}</span>
         <br>
-        <input type="tel" placeholder="e.g. +1 234 567 890" name="telephone" ngModel required>
+        <input id="tel" type="tel" placeholder="e.g. +1 234 567 890" name="telephone" ngModel required>
     </form>
 
 </div>

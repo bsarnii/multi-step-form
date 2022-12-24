@@ -54,3 +54,25 @@ main{
         }
     }
 }
+
+@media screen and (max-width: 900px) {
+    main{
+        margin: 0 1rem;
+        width: 350px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container{
+        height: 100vh;
+        width: 100vw;
+        background-color: $magnolia;
+        padding-top: 25%;
+    }
+    main{
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+}

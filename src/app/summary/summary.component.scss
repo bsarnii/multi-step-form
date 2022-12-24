@@ -59,3 +59,33 @@
     color: $coolGray;
     font-size: 14px;
 }
+
+@media screen and (max-width: 900px){
+    .prices{
+        margin: 1rem 0;
+    }
+    .total-container{
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .summary{
+        width: 100%;
+        margin: 0 auto;
+        background-color: $white;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px $lightGray;
+    }
+    .add-ons{
+        .add-on-with-price{
+            .add-on-price{
+                margin: 0.5rem 0;
+            }
+        }
+    }
+    .gray-14px{
+        margin: 0.5rem 0;
+    }
+}

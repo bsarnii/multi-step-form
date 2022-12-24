@@ -58,3 +58,32 @@
         }
     }
 }
+@media screen and (max-width: 900px) {
+    .add-on-options-container{
+        .add-on-option{
+            span{
+                margin: 0 1rem;
+            }
+            .text-together{
+                width: 220px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .add-ons-container{
+        width: 100%;
+        margin: 0 auto;
+        background-color: $white;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px $lightGray;
+    }
+    .add-on-options-container{
+        .add-on-option{
+            .text-together{
+                width: 180px;
+            }
+        }
+    }
+}

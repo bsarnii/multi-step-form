@@ -4,10 +4,12 @@
     <div class="plan-options">
         <div *ngFor="let i of [0,1,2]" [ngClass]="{'plan-active' : i === selectedItem }" class="option" (click)="selectItem(i)">
             <img src="{{planIcons[i]}}">
-            <p class="planName">{{planNames[i]}}</p>
-            <p *ngIf="!sumData.toggle" class="planFee">${{planFeeMonth[i]}}/mo</p>
-            <p *ngIf="sumData.toggle" class="planFee">${{planFeeYear[i]}}/yr</p>
-            <p *ngIf="sumData.toggle" class="last-paragraph">2 months free</p>
+            <div class="mobile_width_container">
+                <p class="planName">{{planNames[i]}}</p>
+                <p *ngIf="!sumData.toggle" class="planFee">${{planFeeMonth[i]}}/mo</p>
+                <p *ngIf="sumData.toggle" class="planFee">${{planFeeYear[i]}}/yr</p>
+                <p *ngIf="sumData.toggle" class="last-paragraph">2 months free</p>
+            </div>
         </div>
     </div>
     <div class="switch-container">

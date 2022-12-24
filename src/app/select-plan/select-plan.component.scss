@@ -12,6 +12,10 @@
         padding: 1rem;
         width: 140px;
         cursor: pointer;
+        transition: border 0.2s;
+        &:hover{
+            border: 1px solid $purplishBlue;
+        }
         img{
             margin-bottom: 3rem;
         }
@@ -32,8 +36,8 @@
         }
     }
     .plan-active{
-        background-color: $alabaster;
-        border: 1px solid $marineBlue;
+        background-color: $magnolia;
+        border: 1px solid $purplishBlue;
     }
     
 }
@@ -115,4 +119,41 @@ input:checked + .slider:before {
     font-weight: 600;
     color: $strawberryRed;
     text-align: center;
+}
+@media screen and (max-width: 900px) {
+    .plan-options{
+        gap: 0.5rem;
+        justify-content: center;
+        .option{
+            padding: 0.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .select-plan-container{
+        width: 100%;
+        margin: 0 auto;
+        background-color: $white;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px $lightGray;
+    }
+    .plan-options{
+        flex-direction: column;
+        margin: 1rem 0;
+        .option{
+            display: flex;
+            width: 100%;
+            img{
+                margin-bottom: 0;
+            }
+            .mobile_width_container{
+                margin-left: 1rem;
+            }
+        }
+    }
+    .error{
+        margin: 0.1rem;
+    }
 }

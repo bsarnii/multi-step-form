@@ -41,3 +41,10 @@ app-sidebar{
     margin: 0.5rem 0;
     color: $coolGray;
 }
+
+@media screen and (max-width: 600px) {
+    .main-heading{
+        margin: 0.5rem 0 0 0;
+        font-size: 24px;
+    }
+}
