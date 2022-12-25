@@ -3,7 +3,7 @@
     <p class="main-paragraph">You have the option of monthly or yearly billing.</p>
     <div class="plan-options">
         <div *ngFor="let i of [0,1,2]" [ngClass]="{'plan-active' : i === selectedItem }" class="option" (click)="selectItem(i)">
-            <img src="{{planIcons[i]}}">
+            <img src="{{planIcons[i]}}" alt="symbol-{{[i]}}">
             <div class="mobile_width_container">
                 <p class="planName">{{planNames[i]}}</p>
                 <p *ngIf="!sumData.toggle" class="planFee">${{planFeeMonth[i]}}/mo</p>

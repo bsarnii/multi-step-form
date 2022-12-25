@@ -35,7 +35,7 @@
             p{
                 margin: .25rem 0;
                 &:first-child{
-                    font-weight: 500;
+                    font-weight: 700;
                     color: $marineBlue;
                 }
                 &:last-child{
@@ -72,7 +72,7 @@
 }
 @media screen and (max-width: 600px) {
     .add-ons-container{
-        width: 100%;
+        width: 95%;
         margin: 0 auto;
         background-color: $white;
         padding: 1rem;
@@ -81,8 +81,22 @@
     }
     .add-on-options-container{
         .add-on-option{
+            padding: 0.5rem 0;
+            margin: 0.5rem 0;
             .text-together{
                 width: 180px;
+                p{
+                    &:first-child{
+                        font-size: 14px;
+                    }
+                    &:last-child{
+                        font-size: 12px;
+                    }
+                }
+                
+            }
+            .price{
+                font-size: 12px;
             }
         }
     }

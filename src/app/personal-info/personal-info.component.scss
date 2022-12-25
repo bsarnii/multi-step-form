@@ -10,7 +10,7 @@
         input{
             width: 100%;
             padding: 1rem;
-            font-weight: 600;
+            font-weight: 700;
             border-radius: 6px;
             border: 1px solid $lightGray;
             margin-top: .5rem;
@@ -39,7 +39,7 @@
 
 @media screen and (max-width: 600px) {
     .personal-info-container{
-        width: 100%;
+        width: 95%;
         margin: 0 auto;
         background-color: $white;
         padding: 1rem;
